@@ -300,34 +300,3 @@ INSERT INTO menu_items (category_id, name, description, price, stock, image) VAL
 (4, 'Manga Cake', 'Japanese-style sponge cake', 120.00, 20, 'manga-cake.jpg'),
 (5, 'Naruto Ramen Latte', 'Special coffee with ramen-inspired flavors', 180.00, 30, 'naruto-latte.jpg'),
 (5, 'One Piece Straw Hat Frappe', 'Tropical fruit frappe with a pirate twist', 190.00, 30, 'straw-hat-frappe.jpg');
-
--- Create indexes for better performance
-CREATE INDEX IF NOT EXISTS idx_users_username ON users(username);
-CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
-CREATE INDEX IF NOT EXISTS idx_login_attempts_ip ON login_attempts(ip_address);
-CREATE INDEX IF NOT EXISTS idx_email_verifications_user ON email_verifications(user_id);
-CREATE INDEX IF NOT EXISTS idx_remember_tokens_user ON remember_tokens(user_id);
-CREATE INDEX IF NOT EXISTS idx_password_resets_user ON password_resets(user_id);
-CREATE INDEX IF NOT EXISTS idx_manga_title ON manga(title);
-CREATE INDEX IF NOT EXISTS idx_manga_genre ON manga(genre);
-CREATE INDEX IF NOT EXISTS idx_favorites_user ON favorites(user_id);
-CREATE INDEX IF NOT EXISTS idx_users_manga_user ON users_manga(user_id);
-CREATE INDEX IF NOT EXISTS idx_users_manga_manga ON users_manga(manga_id);
-CREATE INDEX IF NOT EXISTS idx_categories_name ON categories(name);
-CREATE INDEX IF NOT EXISTS idx_menu_items_category ON menu_items(category_id);
-CREATE INDEX IF NOT EXISTS idx_orders_user ON orders(user_id);
-CREATE INDEX IF NOT EXISTS idx_order_items_order ON order_items(order_id);
-CREATE INDEX IF NOT EXISTS idx_payment_details_order ON payment_details(order_id);
-CREATE INDEX IF NOT EXISTS idx_user_rewards_user ON user_rewards(user_id);
-CREATE INDEX IF NOT EXISTS idx_reviews_user ON reviews(user_id);
-CREATE INDEX IF NOT EXISTS idx_reviews_rating ON reviews(rating);
-CREATE INDEX IF NOT EXISTS idx_review_photos_review ON review_photos(review_id);
-CREATE INDEX IF NOT EXISTS idx_review_replies_review ON review_replies(review_id);
-CREATE INDEX IF NOT EXISTS idx_review_replies_user ON review_replies(user_id);
-CREATE INDEX IF NOT EXISTS idx_review_reactions_review ON review_reactions(review_id);
-CREATE INDEX IF NOT EXISTS idx_review_reactions_user ON review_reactions(user_id);
-CREATE INDEX IF NOT EXISTS idx_review_categories_name ON review_categories(name);
-CREATE INDEX IF NOT EXISTS idx_review_category_mappings_review ON review_category_mappings(review_id);
-CREATE INDEX IF NOT EXISTS idx_review_category_mappings_category ON review_category_mappings(category_id);
-CREATE INDEX IF NOT EXISTS idx_custom_drinks_user ON custom_drinks(user_id);
-CREATE INDEX IF NOT EXISTS idx_seating_preferences_user ON seating_preferences(user_id); 
