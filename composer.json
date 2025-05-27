@@ -1,0 +1,25 @@
+{
+    "name": "mangabrewcafe/auth",
+    "description": "MangaBrew Cafe Authentication System",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "league/oauth2-client": "^2.6",
+        "league/oauth2-google": "^3.0",
+        "league/oauth2-facebook": "^2.2",
+        "abraham/twitteroauth": "^4.0",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "MangaBrewCafe\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 
